@@ -7,16 +7,16 @@ The SASHELP.PRDSALE dataset was obtained from SAS libraries and  contains inform
 
 <h2><b>Feature Description :</b></h2><br>
 
-•	ACTUAL: The actual sales amount in dollars for furniture products.<br>
-•	PREDICT: The predicted sales amount in dollars for furniture products.<br>
-•	COUNTRY: The country where the sales data was recorded.<br>
-•	REGION: The region within the country where the sales data was collected.<br>
-•	DIVISION: The division categorization of sales data, distinguishing between Education and Consumer segments.<br>
-•	PRODTYPE: The type or category of the furniture product.<br>
-•	PRODUCT: The specific product within the furniture category.<br>
-•	QUARTER: The quarter of the year when the sales occurred .<br>
-•	YEAR: The year when the sales data was recorded.<br>
-•	MONTH: The month when the sales data was recorded.<br>
+•	ACTUAL: The actual sales amount in dollars for furniture products.<br><br>
+•	PREDICT: The predicted sales amount in dollars for furniture products.<br><br>
+•	COUNTRY: The country where the sales data was recorded.<br><br>
+•	REGION: The region within the country where the sales data was collected.<br><br>
+•	DIVISION: The division categorization of sales data, distinguishing between Education and Consumer segments.<br><br>
+•	PRODTYPE: The type or category of the furniture product.<br><br>
+•	PRODUCT: The specific product within the furniture category.<br><br>
+•	QUARTER: The quarter of the year when the sales occurred .<br><br>
+•	YEAR: The year when the sales data was recorded.<br><br>
+•	MONTH: The month when the sales data was recorded.<br><br>
 
 
 
@@ -181,7 +181,7 @@ proc sort data=SASHELP.PRDSALE out=Work.preProcessedData;<br>
 	by YEAR;<br>
 run;<br>
 
-<h2><b>ARIMA Model (Performing univariate time series analysis):<h2><b><br>
+<h2><b>ARIMA Model (Performing univariate time series analysis):</b></h2><br>
 
 proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <br>
 		normal) forecast(forecast));<br>
