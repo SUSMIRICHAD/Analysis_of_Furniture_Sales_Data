@@ -1,11 +1,11 @@
 # Analysis_of_Furniture_Sales_Data
 
-<h5><b>SASHELP.PRDSALE :</b></h5><br>
+<h2><b>SASHELP.PRDSALE :</b></h2><br>
 
 The SASHELP.PRDSALE dataset was obtained from SAS libraries and  contains information about furniture sales. The data set contains 1,440 observations. It has 10 features.<br>
 
 
-<h5><b>Feature Description :</b></h5><br>
+<h2><b>Feature Description :</b></h2><br>
 
 •	ACTUAL: The actual sales amount in dollars for furniture products.<br>
 •	PREDICT: The predicted sales amount in dollars for furniture products.<br>
@@ -20,7 +20,7 @@ The SASHELP.PRDSALE dataset was obtained from SAS libraries and  contains inform
 
 
 
-<h5><b>Code :</b></h5> <br>
+<h5>Code :</h5> <br>
    
 
 title "The First Five Observations Out of 1,440";<br>
@@ -81,10 +81,10 @@ title;<br>
 
 ![Frequency_analysis](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/0f874cbf-1397-44ab-a0ee-83bf5d14ff71)<br>
 
-<h5><b></b>DATA VISUALIZATION : </b></h5><br>
+<h2><b></b>DATA VISUALIZATION : </b></h2><br>
 
 
-<h5><b>Bar-Line Chart :</b></h5><br>
+<h2><b>Bar-Line Chart :</b></h2><br>
 
 title"Bar-Line Chart for Monthly Sales Comparison:Actual vs. Predicted Sales";<br>
 proc sgplot data=sashelp.prdsale;<br>
@@ -139,9 +139,9 @@ proc sgplot data=sashelp.prdsale;<br>
  ![bar3](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/1af1b533-f57c-4eda-8b35-3b5d01e0eb87)<br>
 
 
-<h5><b>Stacked Column Chart:</b></h5><br>
+<h2><b>Stacked Column Chart:</b></h2><br>
 
-<h4>Code:</h4><br>
+<h5>Code:</h5><br>
 
 title 'Actual Sales by Country and Product';<br>
 proc sgplot data=sashelp.prdsale;<br>
@@ -169,7 +169,7 @@ title;<br>
 ![stack2](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/652f3d4b-eb29-4d17-a41c-7a91394e2860)<br>
 
 
-<h5><b>Time Series Analysis:</b></h5><br>
+<h2><b>Time Series Analysis:</b></h2><br>
    <h3><b>Sorting the dataset by YEAR :</b></h3><br>
    
 title"Univariate Time Series Analysis"<br>
@@ -181,7 +181,7 @@ proc sort data=SASHELP.PRDSALE out=Work.preProcessedData;<br>
 	by YEAR;<br>
 run;<br>
 
-<h5><b>ARIMA Model (Performing univariate time series analysis):<h5><b><br>
+<h2><b>ARIMA Model (Performing univariate time series analysis):<h2><b><br>
 
 proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <br>
 		normal) forecast(forecast));<br>
@@ -212,7 +212,7 @@ proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <b
 
  ![foract](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/0bfafa4e-21ce-4628-9c95-7b8a16958b20)<br><br>
 
-<h5><b></b> Predictive Modeling:<h5><b><br>
+<h2><b>Predictive Modeling:<h2><b><br>
 
     <h3><b>Proc GLM (Performing one-way ANOVA):</b></h3><br>
 /*One-Way ANOVA*/<br>
@@ -236,7 +236,7 @@ title;<br>
 ![6](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/2dd51238-1559-4cc1-a93e-b851ae7ebb66)<br><br>
 ![7](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/914ee50a-c51e-47a5-9c32-0668cbc4424d)<br><br>
 
-<h5><b>Proc Discrim (Performing discriminant analysis) :</b></h5> <br>
+<h2><b>Proc Discrim (Performing discriminant analysis) :</b></h2> <br>
 /* Discriminant Analysis*/<br>
 title "Discriminant Analysis: Analyzing Product Sales";<br>
 
