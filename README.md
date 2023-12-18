@@ -205,6 +205,48 @@ proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <b
 
  ![foract](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/0bfafa4e-21ce-4628-9c95-7b8a16958b20)<br><br>
 
+ Predictive Modeling:<br>
+
+    Proc GLM (Performing one-way ANOVA) :<br>
+/*One-Way ANOVA*/<br>
+title "One-Way ANOVA: Analyzing Predicted Sales by Country" <br>
+ods noproctitle;<br>
+ods graphics / imagemap=on; <br>
+proc glm data=SASHELP.PRDSALE;<br>
+	class COUNTRY;<br>
+	model PREDICT=COUNTRY;<br>
+	means COUNTRY / hovtest=levene welch plots=none;<br>
+	lsmeans COUNTRY / adjust=tukey pdiff alpha=.05;<br>
+	run;<br>
+quit;<br>
+title;<br>
+![1](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/2fcf4709-0e51-4cff-90d0-387c7b198375)<br><br>
+
+![2](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/af869e7b-fb33-4924-a28d-7d07d74e19a2)<br><br>
+![3](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/15331156-1dd0-41c8-a591-a1107b685f2a)<br><br>
+![4](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/4673d6ba-f529-4a49-8893-553c0d086ee5)<br><br>
+![5](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/906236ae-fda0-42de-8862-adbb3d3f3083)<br><br>
+![6](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/2dd51238-1559-4cc1-a93e-b851ae7ebb66)<br><br>
+![7](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/914ee50a-c51e-47a5-9c32-0668cbc4424d)<br><br>
+
+Proc Discrim (Performing discriminant analysis) : <br>
+/* Discriminant Analysis*/<br>
+title "Discriminant Analysis: Analyzing Product Sales";<br>
+
+ods noproctitle;<br>
+
+proc discrim data=SASHELP.PRDSALE pool=yes;<br>
+	class PRODUCT;<br>
+	var ACTUAL PREDICT;<br>
+run;<br>
+title;<br>
+
+Output :
+
+![1](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/f67e4a74-ddea-43db-bf34-34a1ad1b4ee4)<br><br>
+![2](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/492f8622-27a5-4043-8067-8a666f4607c0)<br><br>
+![3](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/190b5434-3d15-4afd-bd2c-fd27f74c165b)<br><br>
+
  
  
 
