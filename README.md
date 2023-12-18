@@ -212,7 +212,7 @@ proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <b
 
  ![foract](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/0bfafa4e-21ce-4628-9c95-7b8a16958b20)<br><br>
 
-<h2><b>Predictive Modeling:<h2><b><br>
+<h2><b>Predictive Modeling:</b></h2><br>
 
     <h3><b>Proc GLM (Performing one-way ANOVA):</b></h3><br>
 /*One-Way ANOVA*/<br>
