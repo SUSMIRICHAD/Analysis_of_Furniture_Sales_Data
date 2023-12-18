@@ -214,7 +214,7 @@ proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <b
 
 <h2><b>Predictive Modeling:</b></h2><br>
 
-    <h3><b>Proc GLM (Performing one-way ANOVA):</b></h3><br>
+<h3><b>Proc GLM (Performing one-way ANOVA):</b></h3><br>
 /*One-Way ANOVA*/<br>
 title "One-Way ANOVA: Analyzing Predicted Sales by Country" <br>
 ods noproctitle;<br>
