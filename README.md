@@ -165,6 +165,53 @@ OUTPUT :<br>
 ![stack2](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/652f3d4b-eb29-4d17-a41c-7a91394e2860)<br>
 
 
+Time Series Analysis:<br>
+   Sorting the dataset by YEAR :<br>
+   
+title"Univariate Time Series Analysis"<br>
+
+ods noproctitle;<br>
+ods graphics / imagemap=on;<br>
+
+proc sort data=SASHELP.PRDSALE out=Work.preProcessedData;<br>
+	by YEAR;<br>
+run;<br>
+         ARIMA Model (Performing univariate time series analysis):<br>
+
+proc arima data=Work.preProcessedData plots(only)=(series(corr) residual(corr <br>
+		normal) forecast(forecast));<br>
+	identify var=ACTUAL;<br>
+	estimate method=ML;<br>
+	forecast lead=12 back=0 alpha=0.05 id=YEAR interval=month;<br>
+	outlier;<br>
+	run;<br>
+ title;<br>
+
+ ![uni](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/d0aa5f19-4ecf-460f-91e4-71e80b6c4ed3)<br><br>
+
+ ![Trendcor](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/b5c3c5db-6cac-4cfd-8190-27c467b58010)<br><br>
+
+ ![Maxlike](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/865ed52a-df30-4411-b4b0-648eb5902550)<br><br>
+
+ ![resi](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/582e3615-81a5-4a0a-b09c-199f5fd27851)<br><br>
+
+ ![resnor](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/3b0974d8-1474-4908-bda0-f5f98892a201)<br><br>
+
+ ![resdis](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/b6ea2af2-451d-4332-8874-4d35cf236c09)<br><br>
+
+ ![resqq](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/b4bee117-f17e-4b43-9acc-ad3f12c1d79d)<br><br>
+
+ ![for](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/d097c7b9-b814-43f9-9499-50436e01a815)<br><br>
+
+ ![foract](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/0bfafa4e-21ce-4628-9c95-7b8a16958b20)<br><br>
+
+ 
+ 
+
+
+
+ 
+
 
       
 
