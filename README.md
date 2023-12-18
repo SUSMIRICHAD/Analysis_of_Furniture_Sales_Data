@@ -227,8 +227,8 @@ proc glm data=SASHELP.PRDSALE;<br>
 	run;<br>
 quit;<br>
 title;<br>
-![1](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/2fcf4709-0e51-4cff-90d0-387c7b198375)<br><br>
 
+![1](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/2fcf4709-0e51-4cff-90d0-387c7b198375)<br><br>
 ![2](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/af869e7b-fb33-4924-a28d-7d07d74e19a2)<br><br>
 ![3](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/15331156-1dd0-41c8-a591-a1107b685f2a)<br><br>
 ![4](https://github.com/SUSMIRICHAD/Analysis_of_Furniture_Sales_Data/assets/146381149/4673d6ba-f529-4a49-8893-553c0d086ee5)<br><br>
